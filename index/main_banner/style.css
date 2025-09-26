@@ -1,0 +1,54 @@
+@charset "utf-8";
+#mainVisual{position:relative;width:100%;height:100vh}
+#mainVisual .main_banner{overflow:hidden;width:100%;height:100%}
+#mainVisual .main_banner video{width:100%;filter:brightness(0.7);object-fit:cover}
+#mainVisual .tit{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:100%;display:flex;flex-direction:column;align-items:center;text-align:center}
+#mainVisual .tit h1{line-height:1.3;font-size:64px;color:#fff}
+#mainVisual .tit h1 div{font-weight:200}
+#mainVisual .tit a{display:flex;align-items:center;gap:5px;margin-top:50px;padding:15px 40px;border-radius:35px;font-size:20px;font-weight:600;transition:all .3s;backdrop-filter:blur(5px);color:#fff;background-color:rgb(255,255,255, 0.2)}
+#mainVisual .tit a svg{width:20px;height:20px;transition:all .3s}
+#mainVisual .scroll_down{display:flex;flex-direction:column;align-items:center;gap:50px;position:absolute;top:50%;right:1%;transform:translateY(-50%);font-size:13px;font-family:var(--k-font);color:rgb(255, 255, 255, 0.5)}
+#mainVisual .scroll_down div:first-child{transform:rotate(-90deg)}
+#mainVisual .scroll_down .line{position:relative;width:1px;height:170px;background-color:rgb(255, 255, 255, 0.5)}
+#mainVisual .scroll_down .line::before{content:"";position:absolute;top:0%;left:0px;width:1px;height:0%;background-color:#fff;animation:scroll_down 5s infinite}
+#mainVisual .scroll_down .line::after{opacity:0;content:"";position:absolute;top:0%;left:-1.5px;width:5px;height:5px;border-radius:50%;background-color:#fff;animation:scroll_ball 5s infinite}
+@keyframes scroll_down {0%{height:0%;opacity:1}80%{height:100%;opacity:1}81%{height:0%;opacity:1}100%{height:0%;opacity:0}}
+@keyframes scroll_ball {0%{top:0%;opacity:1}80%{top:100%;opacity:1}81%{top:0%;opacity:1}100%{top:0%;opacity:1}}
+
+/* 반응형 [s] */
+@media (hover:hover){
+#mainVisual .tit a:hover{background-color:var(--primary)}
+#mainVisual .tit a:hover svg{transform:translateX(10px)}
+}
+@media(max-width:1980px){
+#mainVisual .tit h1{font-size:58px}
+#mainVisual .tit a{font-size:18px}
+#mainVisual .main_banner video{height:100%}
+}
+@media (max-width:1380px){
+#mainVisual .tit h1{font-size:50px}
+#mainVisual .tit a{font-size:16px}
+}
+@media (max-width:1024px){
+#mainVisual{overflow:hidden}
+#mainVisual .tit h1{font-size:40px}
+#mainVisual .tit a{padding:15px 35px;font-size:15px}
+#mainVisual .scroll_down{right:-1%}
+}
+@media (max-width:768px){
+#mainVisual{height:650px}
+#mainVisual .tit h1{font-size:35px}
+#mainVisual .tit a{margin-top:40px;font-size:14px}
+#mainVisual .scroll_down{display:none}
+}
+@media (max-width:480px){
+#mainVisual{height:600px}
+#mainVisual .tit h1{font-size:28px}
+#mainVisual .tit a{margin-top:35px;font-size:13px}
+}
+@media (max-width:390px){
+#mainVisual{height:550px} 
+#mainVisual .tit h1{font-size:25px}
+#mainVisual .tit a{margin-top:32px;padding:13px 30px;font-size:12px}
+}
+/* 반응형 [e] */

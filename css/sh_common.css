@@ -1,0 +1,122 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css');/* regular-400, medium-500, semibold-600, bold-700 */ 
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{-webkit-text-size-adjust:none}
+body{background:#fff;font-size:0.81em;font-family:'pretendard'}
+h1, h2, h3, h4, h5, h6, input, button, textarea, select{font-family:'pretendard'}
+#sh_wrapper *{word-break:keep-all}
+:root{--primary:#357d9a;--k-font:'Pretendard';--e-font:'Raleway'}
+
+/* HEADER */
+#sh_hd{position:fixed;left:0;top:0;z-index:30;width:100%;font-size:15px;font-family:var(--e-font),var(--k-font)}
+#sh_hd.sub{position:absolute}
+
+/* MAIN */
+#sh_section{overflow:hidden;position:relative;height:100vh;font-size:18px;font-weight:400;color:#777;line-height:1.5;font-family:var(--e-font),var(--k-font)}
+#sh_section .pl{white-space:pre-line}
+#sh_section .full-pager{display:flex;flex-direction:column;align-items:center;gap:30px;position:absolute;z-index:2;top:50%;left:2.5%;right:unset;transform:translateY(-50%)}
+#sh_section .full-pager span{opacity:1;margin:0px;background:rgb(255, 255, 255, 0.5)}
+#sh_section .full-pager span.on{width:10px;height:10px;transition:all .3s;background:#fff}
+#sh_section .full-pager.color span{background:rgb(0, 0, 0, 0.3)}
+#sh_section .full-pager.color span.on{background:var(--primary)}
+#sh_section .section_cate{font-size:23px;font-weight:700;color:var(--primary)}
+#sh_section .section_more{display:flex;align-items:center;gap:10px;width:max-content;font-size:18px;font-weight:600;transition:all .3s}
+#sh_section .section_more svg{padding:4px;width:13px;height:13px;box-sizing:content-box;border-radius:50%;transition:all .3s;color:#fff;background-color:var(--primary)}
+
+/* CONTAINER */
+#sh_container{position:relative;z-index:10}
+#sh_container.sub{background:#fff}
+#sh_sub_wrap{position:relative}
+#sh_content{overflow:hidden;position:relative;z-index:10;width:100%;max-width:1200px;min-height:550px;padding:70px 0;margin:0 auto;background:#fff}
+
+/* FOOTER */
+#sh_ft{overflow:hidden;position:relative;z-index:20;padding:100px 10% 60px;font-size:15px;font-weight:400;line-height:1.8;color:#fff;font-family:var(--e-font),var(--k-font);background-color:#000}
+#sh_ft .top{display:flex;justify-content:space-between;align-items:center;padding-bottom:40px;margin-bottom:40px;border-bottom:1px solid rgb(255, 255, 255, 0.2)}
+#sh_ft .top .cs{display:flex;align-items:center;gap:12px;font-family:var(--k-font)}
+#sh_ft .top .cs span{font-size:16px;font-weight:500;color:rgb(255, 255, 255, 0.5)}
+#sh_ft .top .cs .num{font-size:22px;font-weight:700;color:#fff}
+#sh_ft .btm{display:flex;justify-content:space-between;align-items:center;margin-top:100px}
+#sh_ft .btm .link{display:flex;align-items:center;gap:15px}
+#sh_ft .btm a{font-size:15px;font-weight:600;color:#fff;transition:all .3s}
+#sh_ft .btm .to_top{display:flex;align-items:center;gap:3px;margin-left:8px;font-size:15px;font-weight:600;color:#fff;transition:all .3s;cursor:pointer}
+
+/* 반응형 하단 버튼 공통 */
+#fix_tel{opacity:0;display:none;position:fixed;right:15px;bottom:50px;z-index:101;width:65px;height:65px;margin-right:-10px;border-radius:50%;font-size:30px;text-align:center;line-height:65px;color:#fff;background:var(--primary);box-shadow:5px 5px 5px rgba(0,0,0,.2);-webkit-transition:all .2s;transition:all .2s}
+#fix_tel.active{opacity:1;margin-right:0}
+#sh_ft_btns{display:none;padding:15px}
+#sh_ft_btns .btns{overflow:hidden}
+#sh_ft_btns .row2 a{width:50%}
+#sh_ft_btns a{float:left;display:block;width:100%;height:55px;font-size:16px;line-height:55px;color:#fff;text-align:center;background:var(--primary);font-family:'Noto Sans KR';font-weight:700}
+#sh_ft_btns a.tel{font-size:18px;font-weight:700;letter-spacing:0;font-family:'Poppins'}
+#sh_ft_btns a i{padding-right:5px;font-size:18px}
+#sh_ft_btns a.kakao{font-weight:normal;color:#402325;background-color:#ffe500}
+
+/* 반응형 [s] */
+@media (hover:hover){
+#sh_section .section_more:hover{color:var(--primary)}
+#sh_section .section_more:hover svg{transform:rotate(180deg)}
+#sh_ft .btm a:hover{color:var(--primary)}
+#sh_ft .btm .to_top:hover{color:var(--primary)}
+}
+@media(max-width:1980px){
+#sh_section{font-size:16px}
+#sh_section .section_cate{font-size:20px}
+#sh_section .section_more{font-size:15px}
+}
+@media(max-width:1380px){
+#sh_section .section_cate{font-size:18px}
+#sh_section .full-pager{left:1.5%}
+#sh_ft{padding:100px 5% 60px}
+}
+@media (max-width:1024px){
+#sh_hd{position:relative;background-color:#111}
+#sh_content{padding:50px 0}
+#sh_section{overflow:visible;height:auto;font-size:15px}
+#sh_section .full-pager{display:none}
+#sh_section .section_cate{font-size:16px}
+#sh_section .section_more{font-size:14px}
+#sh_ft{padding:80px 2.5% 40px;font-size:14px}
+#sh_ft .top .cs span{font-size:15px}
+#sh_ft .top .cs .num{font-size:21px}
+#sh_ft .btm a{font-size:14px}
+#sh_ft .btm .to_top{font-size:14px}
+}
+@media (max-width:768px){
+#sh_content{padding:30px 0}
+}
+@media (max-width:480px){
+#sh_hd.sub{position:relative}
+#sh_content{padding:0px}
+#sh_section{font-size:14px}
+#sh_section .section_cate{font-size:15px}
+#sh_section .section_more{font-size:13px}
+#sh_section .section_more svg{width:11px;height:11px}
+#sh_ft{padding:70px 2.5% 30px}
+#sh_ft .top{flex-direction:column;gap:15px}
+#sh_ft .top .cs{gap:10px}
+#sh_ft .top .cs span{font-size:14px}
+#sh_ft .top .cs .num{font-size:20px}
+#sh_ft .info{text-align:center}
+#sh_ft .btm{flex-direction:column;margin-top:80px}
+#sh_ft .btm .link{margin-top:25px;width:100%}
+#sh_ft .btm .to_top{margin-left:auto}
+#fix_tel{display:block}
+#sh_ft_btns{display:block}
+#sh_ft dl dt{font-size:16px}
+}
+@media (max-width:390px){
+#sh_section{font-size:13px}
+#sh_section .section_cate{font-size:14px}
+#sh_section .section_more{font-size:12px}
+#sh_section .section_more svg{padding:3px}
+#sh_ft{padding-bottom:20px;font-size:13px}
+#sh_ft .top{padding-bottom:30px;margin-bottom:30px}
+#sh_ft .top .cs span{font-size:13px}
+#sh_ft .top .cs .num{font-size:18px}
+#sh_ft .btm a{font-size:13px}
+#sh_ft .btm .to_top{font-size:13px}
+}
+/* 반응형 [e] */

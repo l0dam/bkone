@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+#shSub{display:flex;align-items:center;justify-content:center;height:540px;margin:0 auto;background-image:linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)), url(./sub_bg.jpg);background-repeat:no-repeat;background-position:50% 55%;background-size:cover;font-family:var(--e-font),var(--k-font)}
+#shSub .txt_area{padding-top:40px;color:#fff;text-align:center}
+#shSub .txt_area p{margin-bottom:20px;font-size:42px}
+#shSub .txt_area div{display:flex;justify-content:center;align-items:center;font-size:16px;font-weight:500}
+#shSub .txt_area div a{color:#fff}
+#shSub .txt_area div svg{width:15px;margin:0 10px}
+
+/* 반응형 [s] */
+@media (max-width:1024px){
+#shSub{height:440px}
+#shSub .txt_area p{margin-bottom:15px;font-size:34px}
+}
+@media (max-width:768px){
+#shSub{height:380px}
+#shSub .txt_area p{margin-bottom:12px;font-size:30px}
+#shSub .txt_area div{font-size:15px}
+}
+@media (max-width:580px){
+#shSub{height:340px}
+#shSub .txt_area p{margin-bottom:10px;font-size:28px}
+#shSub .txt_area div{font-size:14px}
+}
+@media (max-width:480px){
+#shSub{height:55px;border-bottom:1px solid #e1e1e1;background:none}
+#shSub .txt_area{padding-top:0px}
+#shSub .txt_area p{margin-bottom:0px;font-size:16px;color:#111}
+#shSub .txt_area div{display:none}
+}
+/* 반응형 [e] */
